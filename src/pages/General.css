@@ -1,0 +1,50 @@
+/*HOME */
+
+.home-text {
+  font-size: 28px;
+  text-align: center;
+}  
+
+  .home-img {
+    width: 45%;
+    margin-left: 27%;
+}
+  
+  /*NAVBAR*/
+
+  .nav-bar {
+    background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+    position: sticky;
+  }
+
+  .navbar-text {
+    color: white;
+    display: flex;
+    padding: 0.5rem 0rem;
+  }
+  .nav-links {
+    margin-left: 50%;
+  } 
+
+@media screen and (max-width: 375px) {
+  .nav-links{
+  margin-left: 36%;
+}
+}
+
+@media screen and (max-width: 320px) {
+  .nav-links{
+    margin-left: 34%;
+  }
+  
+    }
+     /*UNİTS*/
+
+  .units-title {
+    text-align: center;
+    font-size: 28px;
+}
+

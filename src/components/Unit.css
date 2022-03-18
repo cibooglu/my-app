@@ -1,0 +1,21 @@
+.units {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+    
+  table {
+    border: 2px solid rgb(26, 23, 23);
+    width: 800px;
+  }
+  
+  .data {
+    text-align: -webkit-center;
+}
+
+.unit-td {
+border: 1px solid black;
+width: 30%;
+height: 100px;
+}
+

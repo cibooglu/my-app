@@ -1,25 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import * as React from "react";
+import { Routes, Route, Outlet, Link } from "react-router-dom";
+import Units from './pages/Units.js';
+import './pages/General.css';
+import Image from "./img/world.jpg";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="units" element={<Units />} />
+        </Route>
+      </Routes>
     </div>
   );
 }
 
-export default App;
+function Layout() {
+  return (
+    <div>
+      <nav className="nav-bar">
+        <ul className="nav-links">
+            <Link className="navbar-text" to="/">Home</Link>
+        </ul>
+         <ul>
+            <Link className="navbar-text" to="/units">Units</Link>
+         </ul>
+      </nav>
+      <hr />
+      <Outlet />
+    </div>
+  );
+}
+
+function Home() {
+    return(
+        <>
+        <div className="home">
+  <p className="home-text">
+ Ages of Empires Home Page
+ </p>
+ <div>
+  <img className="home-img" src={Image} alt="age" />
+</div>
+</div>
+  </>
+    ) 
+  }
